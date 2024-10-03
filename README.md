@@ -578,5 +578,60 @@ exec "$@"
 2. Start and enable PostgreSQL
     1.  `systemctl start postgresql`
     2. `sudo systemctl enable postgresql`
+**COMMON PSQL COMMANDS**
 
+| Command | Basic Commands |
+| --- | --- |
+| sudo -u usernamae psql | Login in to psql |
+| \q | Quit  |
+| \h | Help |
+| \l | List all Databases |
+| \dt | List all tables in the current database |
+| \d |  |
+| \conninfo | View current connection info |
+| \c db_name username | Switch user |
+| \c db_name | Connect to database |
+| \dn | List all schemas |
+| \d table_name | Show tables schema |
+| \du  | List all users |
+| \di | List all indexes |
+| \dv | List all views |
+| \dv+ view_name | View details of specific view |
+| \ds | List all sequences |
+| \df | List all functions |
+| \s | Show command history |
+| Command | Creating and Deleting a Database |
+| createdb mydb | Create database |
+| dropdb mydb | Delete a database |
+| Command | Query and Output Commands |
+| SELECT * from table_name;  | Execute SQL query |
+| \timing | Display query execution time |
+| \o filename | Set output to a file |
+| \x | Show query results in a vertical format |
+| Command | Transaction Management |
+| BEGIN; | Begin a transaction |
+| COMMIT; | Commit a transaction |
+|  ROLLBACK: | Rollback a transaction |
+| Command | System and General Info Commands |
+| SELECT version(); | View PostgreSQL version |
+| \h | List all available SQL commands |
+| \h SQL_command | Get help for a specific command |
+| \? | Show all psql commands |
+| Command | Session and File Management |
+| \o output_file.sql | Save an SQL script |
+| \i filename.sql | Run an SQL script file |
+| SHOW ALL | View all configuration settings |
+| Command | User and Permission Management |
+| CREATE USER username WITH PASSWORD 'password'; | Create a new user |
+| GRANT ALL PRIVILEGES ON TABLE table_name TO username; | Grant privileges on a table |
+| REVOKE ALL PRIVILEGES ON TABLE table_name FROM username; | Revoke privileges on table |
+| Command | Backup and Restore |
+| pg_dump database_name > backup_file.sql | Backup a database |
+| psql database_name < backup_file.sql | Restore a database |
+| Command | PostgreSQL Server Commands |
+| sudo systemctl status postgresql | Check postgresql status |
+| sudo systemctl start postgresql | Start postgresql |
+| sudo systemctl stop postgresql | Stop postgresql |
+| sudo systemctl restart postgresql | Restart postgresql |
+1. Configuration of PostgreSQL for Apache Server
 
