@@ -578,6 +578,7 @@ exec "$@"
 2. Start and enable PostgreSQL
     1.  `systemctl start postgresql`
     2. `sudo systemctl enable postgresql`
+  
 **COMMON PSQL COMMANDS**
 
 | Command | Basic Commands |
