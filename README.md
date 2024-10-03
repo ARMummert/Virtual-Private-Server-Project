@@ -634,5 +634,7 @@ exec "$@"
 | sudo systemctl start postgresql | Start postgresql |
 | sudo systemctl stop postgresql | Stop postgresql |
 | sudo systemctl restart postgresql | Restart postgresql |
+
 1. Configuration of PostgreSQL for Apache Server
+   - in progress
 
