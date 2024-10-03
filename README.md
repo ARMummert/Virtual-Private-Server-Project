@@ -7,7 +7,7 @@ To create a secure dedicated server capable of hosting a web application and a d
 
 With the rising costs of web hosting and cloud services, I decided to build my own dedicated server to host my database and deploy my software engineering portfolio.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.
 
-[https://www.notion.so/Dedicated-Server-1068dde34aea8076b391cd9e2ae287c4?pvs=4#1138dde34aea8079afd9f647de39e949]
+![Description of Image](./Dedicated-Server.png)
 
 ### **TOOLS & TECHNOLOGIES**
 
@@ -578,5 +578,86 @@ exec "$@"
 2. Start and enable PostgreSQL
     1.  `systemctl start postgresql`
     2. `sudo systemctl enable postgresql`
+  
+**COMMON PSQL COMMANDS**
 
+| Command | Basic Commands |
+| --- | --- |
+| sudo -u usernamae psql | Login in to psql |
+| \q | Quit  |
+| \h | Help |
+| \l | List all Databases |
+| \dt | List all tables in the current database |
+| \d |  |
+| \conninfo | View current connection info |
+| \c db_name username | Switch user |
+| \c db_name | Connect to database |
+| \dn | List all schemas |
+| \d table_name | Show tables schema |
+| \du  | List all users |
+| \di | List all indexes |
+| \dv | List all views |
+| \dv+ view_name | View details of specific view |
+| \ds | List all sequences |
+| \df | List all functions |
+| \s | Show command history |
+| Command | Creating and Deleting a Database |
+| createdb mydb | Create database |
+| dropdb mydb | Delete a database |
+| Command | Query and Output Commands |
+| SELECT * from table_name;  | Execute SQL query |
+| \timing | Display query execution time |
+| \o filename | Set output to a file |
+| \x | Show query results in a vertical format |
+| Command | Transaction Management |
+| BEGIN; | Begin a transaction |
+| COMMIT; | Commit a transaction |
+|  ROLLBACK: | Rollback a transaction |
+| Command | System and General Info Commands |
+| SELECT version(); | View PostgreSQL version |
+| \h | List all available SQL commands |
+| \h SQL_command | Get help for a specific command |
+| \? | Show all psql commands |
+| Command | Session and File Management |
+| \o output_file.sql | Save an SQL script |
+| \i filename.sql | Run an SQL script file |
+| SHOW ALL | View all configuration settings |
+| Command | User and Permission Management |
+| CREATE USER username WITH PASSWORD 'password'; | Create a new user |
+| GRANT ALL PRIVILEGES ON TABLE table_name TO username; | Grant privileges on a table |
+| REVOKE ALL PRIVILEGES ON TABLE table_name FROM username; | Revoke privileges on table |
+| Command | Backup and Restore |
+| pg_dump database_name > backup_file.sql | Backup a database |
+| psql database_name < backup_file.sql | Restore a database |
+| Command | PostgreSQL Server Commands |
+| sudo systemctl status postgresql | Check postgresql status |
+| sudo systemctl start postgresql | Start postgresql |
+| sudo systemctl stop postgresql | Stop postgresql |
+| sudo systemctl restart postgresql | Restart postgresql |
 
+1. Configuration of PostgreSQL for Apache Server
+   - in progress
+
+### CITATIONS
+
+Cloudflare "Cloudflare Connectivity Cloud." Cloudflare. Cloudflare, 2024. [www.cloudflare.com](https://www.cloudflare.com/). Accessed 28 Sept. 2024.
+
+The Apache Software Foundation™. "Apache HTTP Server Documentation." The Apache Software Foundation, 2024. https://httpd.apache.org/docs-project/. Accessed 1 Sept. 2024.
+
+Dedicated-Server.png "Lucidchart." Lucidchart. Lucidchart, 2024. [www.lucidchart.com](https://www.lucidchart.com/). Accessed 25 Sept. 2024.
+
+fail2ban.org. "Fail2ban." GitHub, GitHub, Feb. 20, 2024. https://github.com/fail2ban/fail2ban. Accessed 15 Sept. 2024.
+
+OWASP ModSecurity. "ModSecurity v3.0.12." GitHub, GitHub, 2024. https://github.com/owasp-modsecurity/ModSecurity/tree/v3.0.12. Accessed 3 Oct. 2024.
+
+PhoenixNAP. "How to Setup and Configure ModSecurity on Apache." PhoenixNAP Knowledge Base, PhoenixNAP, 2024. https://phoenixnap.com/kb/setup-configure-modsecurity-on-apache. Accessed 3 Oct. 2024.
+
+PostgreSQL Global Development Group. "PostgreSQL Documentation." PostgreSQL, PostgreSQL Global Development Group, 2024. https://www.postgresql.org/docs/. Accessed 3 Oct. 2024.
+
+PostgreSQL Global Development Group. "psql Command." PostgreSQL Documentation, PostgreSQL Global Development Group, 2024. https://www.postgresql.org/docs/current/app-psql.html. Accessed 3 Oct. 2024.
+
+Ubuntu Documentation Team. "UFW - How to configure UFW firewall." Ubuntu Documentation, Ubuntu.com, 2024. https://help.ubuntu.com/community/UFW. Accessed 15 Sept. 2024.
+
+WireGuard Technologies. "WireGuard Quickstart Guide." WireGuard, 2024. https://www.wireguard.com/quickstart/. Accessed 15 Sept. 2024.
+
+The OpenSSH Project. "OpenSSH Manual." OpenSSH, 2024. https://www.openssh.com/manual.html. Accessed 15 Sept. 2024.
