@@ -543,7 +543,7 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 ```
 
-1. Create an [entrypoint.sh](http://entrypoint.sh) file
+4. Create an [entrypoint.sh](http://entrypoint.sh) file
 
 ```bash
 #!/bin/bash
@@ -562,13 +562,13 @@ tail -f /dev/null
 exec "$@"
 ```
 
-1. Make sure [entrypoint.sh](http://entrypoint.sh) has executable permissions
+5. Make sure [entrypoint.sh](http://entrypoint.sh) has executable permissions
     1. `chmod +x [entrypoint.sh](http://entrypoint.sh/)`
-2. Create a Build 
+6. Create a Build 
     1. `sudo docker buildx build -t test-image`
-3. Create and Run Docker Image
+7. Create and Run Docker Image
     1. `sudo docker run -d -- name <container_name> -p PORT:PORT <image_name>`
-4. Start Container
+8. Start Container
     1. `sudo docker start <container_name>`
 
 ### SETTING UP POSTGRESQL FOR APACHE SERVER
@@ -635,8 +635,17 @@ exec "$@"
 | sudo systemctl stop postgresql | Stop postgresql |
 | sudo systemctl restart postgresql | Restart postgresql |
 
-1. Configuration of PostgreSQL for Apache Server
-   - in progress
+3. Configuration of PostgreSQL for Apache Server
+    1. Add Proxy for PostgreSQL
+        1. `ProxyPreserveHost On
+        ProxyPass /api http://localhost:5000/api
+        ProxyPassReverse /api http://localhost:5000/api`
+    2. Reload Apache
+        1. `sudo systemctl restart apache2`
+4. Build and Deploy Backend
+    1. `Example: run npm build`
+    2. `npm run export`
+    3. `sudo mv out/* /var/www/html/your_frontend)/`
 
 ### CITATIONS
 
