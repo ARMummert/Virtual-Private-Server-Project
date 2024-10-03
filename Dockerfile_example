@@ -1,0 +1,19 @@
+# Base Image
+FROM debian:latest
+
+# Install WireGuard and necessary dependencies
+RUN apt-get update && \
+    apt-get install -y wireguard iproute2 qrencode iptables && \
+    apt-get clean
+
+# Expose WireGuard's default port (UDP 51820)
+EXPOSE 51820/udp
+
+# Copy entrypoint script to container
+COPY entrypoint.sh /usr/local/bin/
+
+# Make the script executable
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Set entrypoint to the script, runs WireGuard in foreground
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
