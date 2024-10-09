@@ -8,7 +8,7 @@ To create a secure dedicated server capable of hosting a web application and a d
 
 With the rising costs of web hosting and cloud services, I decided to build my own dedicated server to host my database and deploy my software engineering portfolio.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.  
 
-![Dedicated-Server - Page 1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dbffe348-896c-4c6f-967e-6b4014b6c269/884d3a54-bd0e-4aa1-b7fb-9006972bfb55/Dedicated-Server_-_Page_1.png)
+[https://www.notion.so/Dedicated-Server-1068dde34aea8076b391cd9e2ae287c4?pvs=4#1138dde34aea8079afd9f647de39e949]
 
 ### **TOOLS & TECHNOLOGIES**
 
