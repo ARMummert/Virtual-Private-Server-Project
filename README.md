@@ -1,13 +1,14 @@
-# Dedicated-Server-Project
+# Dedicated Server
+
 ### **PROJECT GOAL**
 
 To create a secure dedicated server capable of hosting a web application and a database. 
 
 ### **PROJECT OVERVIEW**
 
-With the rising costs of web hosting and cloud services, I decided to build my own dedicated server to host my database and deploy my software engineering portfolio.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.
+With the rising costs of web hosting and cloud services, I decided to build my own dedicated server to host my database and deploy my software engineering portfolio.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.  
 
-![Description of Image](./Dedicated-Server.png)
+![Dedicated-Server - Page 1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dbffe348-896c-4c6f-967e-6b4014b6c269/884d3a54-bd0e-4aa1-b7fb-9006972bfb55/Dedicated-Server_-_Page_1.png)
 
 ### **TOOLS & TECHNOLOGIES**
 
@@ -47,6 +48,29 @@ With the rising costs of web hosting and cloud services, I decided to build my o
 - Web Hosting - Serving static and dynamic web content
 - Database - PostgreSQL Relational Database Management
 
+## WHAT I LEARNED
+
+Creating a dedicated server environment was a challenging but rewarding project.  I began this project with the goal of building a secure, reliable, and robust dedicated server to host my webpage and my PostgreSQL database.  The project started with researching server administration, networking, and security best practices.  During this time, I gained continued learning experiences with building an Apache server, setting up a Docker container, setting up a PostgreSQL database, and how to implement security measures such as SSL, WAF, and DDoS protection.
+
+### SECURITY BEST PRACTICES
+
+To ensure that my server remains secure, I implemented a robust combination of security measures.  I felt this was an essential step to protect my server from attacks and vulnerabilities.  To avoid a Double NAT situation I placed my modem into bridge mode and connected my router to the modem via an Ethernet cable.  I was then able to use the modems IP address to connect my server to my domain name.  By placing my modem in bridge mode I was able to avoid using my public IP address and to take advantage of the advanced security features that my router offers.  
+
+**NETWORK SECURITY**
+
+For network security I created strict firewall rules for both incoming and outgoing traffic allowing only necessary connections.  I also setup an SSL certificate, DDoS protection, DDNS, and WAF firewall rules through Cloudflare.  These tools offered me the opportunity to enhance my servers security while also protecting any sensitive data.  
+
+**I used the following tools:**
+
+1. Fail2Ban to actively monitor login attempts and blocked IP addresses minimizing the risk of brute-force attacks
+2. ModSecurity to have a server-side web application firewall to prevent attacks such as, SQL Injection and cross-site scripting.
+3. Wireguard VPN to provide a secure tunnel between the server and any client devices
+4. UFW (uncomplicated firewall) to allow or deny ports
+
+By utilizing these tools I was able to create a robust and secure server environment.
+
+### PROBLEM SOLVING & TROUBLESHOOTING
+
 ## INSTALLATION, INSTRUCTIONS, & SETUP
 
 ---
@@ -57,7 +81,7 @@ Install a Linux Distribution like Linux Mint or Ubuntu on the server machine.
 
 ### PORT FORWARDING
 
-Forward ports 80 and 443 on your modem
+Forward ports 80 and 443 on your router / modem
 
 ### **CLOUDFLARE DNS, DDNS, DDOS, WAF FIREWALL RULES. SSL CERTIFICATE**
 
@@ -143,6 +167,7 @@ zone=<your_domain>
     1. `sudo a2enmod ssl`
     2. `sudo a2enmod headers`
     3. `sudo systemctl restart apache2`
+
 ### WEB SERVER INSTALLATION & CONFIGURATION
 
 Install latest version of the Apache2 Web Server.
@@ -289,9 +314,6 @@ Install latest version of the Apache2 Web Server.
           GNU nano 7.2                            jail.local                                     
         [DEFAULT]
         
-        #IPs that are exempt from banning
-        ignoreip = 73.67.255.236
-        
         #Set ban time (1hr)
         bantime = 1h
         
@@ -366,13 +388,13 @@ Install latest version of the Apache2 Web Server.
     
     ```jsx
     [Interface]
-    Address = 10.0.0.1/24  # Server VPN IP address
-    ListenPort = 51820      # Listening port
-    PrivateKey = <server_private_key>  # Replace with the content of server_private.key
+    Address = 10.0.0.1/24  
+    ListenPort = 51820     
+    PrivateKey = <server_private_key>  
     
     [Peer]
-    PublicKey = <client_public_key>  # Replace with client's public key
-    AllowedIPs = 10.0.0.2/32         # Client VPN IP address
+    PublicKey = <client_public_key>  
+    AllowedIPs = 10.0.0.2/32         
     
     ```
     
@@ -391,13 +413,13 @@ Install latest version of the Apache2 Web Server.
 
 ```jsx
 [Interface]
-Address = 10.0.0.2/24       # Client VPN IP address
-PrivateKey = <client_private_key>  # Replace with the content of client_private.key
+Address = 10.0.0.2/24      
+PrivateKey = <client_private_key> 
 
 [Peer]
-PublicKey = <server_public_key>  # Replace with the server's public key
-Endpoint = <server_ip>:51820      # Replace <server_ip> with your server's public IP
-AllowedIPs = 0.0.0.0/0            # Route all traffic through VPN
+PublicKey = <server_public_key>  
+Endpoint = <server_ip>:51820     
+AllowedIPs = 0.0.0.0/0          
 
 ```
 
@@ -419,50 +441,36 @@ AllowedIPs = 0.0.0.0/0            # Route all traffic through VPN
 2. Enable ModSecurity
     1. `sudo a2enmod security2`
 3. Configure ModSecurity
-    1. `sudo nano /etc/modsecurity/modsecurity.conf`
-    2. Set `SecRuleEngine On`
-    3. Adjust other settings as necessary
-    4. Save and Exit
+    1. `sudo cp /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf`
+    2. `sudo nano /etc/modsecurity/modsecurity.conf`
+    3. Set `SecRuleEngine On`
+    4. Adjust other settings as necessary
+    5. Save and Exit
 4. Install the OWASP ModSecurity Core Rule Set(CRS)
-    1. `sudo git clone https://github.com/coreruleset/coreruleset.git /etc/modsecurity/owasp-crs`
-5. Change to the CRS directory to copy crs example file
-    1. `cd /etc/modsecurity/owasp-crs`
-    2. `sudo cp crs-setup.conf.example crs-setup.conf`
-6.  Include the CRS in the ModSecurity Configuration
-    1. `sudo nano /etc/modsecurity/modsecurity.conf`
-    2. Add the following lines to the end of modsecurity.conf
-        1. `Include /etc/modsecurity/owasp-crs/crs-setup.conf`
-        2. `Include /etc/modsecurity/owasp-crs/rules/*.conf`
-7. Restart Apache
+    1. `wget https://github.com/coreruleset/coreruleset/archive/v3.3.0.zip`
+    2. Verify checksum: `certutil -hashfile vFileName.zip sha1; echo ProvidedChecksum`
+    3. `unzip FileName.zip`
+    4. `mv coreruleset-3.3.0/crs-setup.conf.example /etc/modsecurity/crs-setup.conf`
+    5. `mv coreruleset-3.3.0/rules/ /etc/modsecurity/`
+5. Configure Apache2 config file for modsec
+    1. `sudo nano /etc/apache2/mods-enabled/security2.conf`
+    2. Make sure both rules are set: 
+        1. `IncludeOptional /etc/modsecurity/*.conf*`
+        2. `Include /etc/modsecurity/rules/.conf`
+6. Restart Apache
     1. `sudo systemctl restart apache2`
-8. Verify ModSecurity Installation
+7. Verify ModSecurity Installation
     1. `sudo tail -f /var/log/apache2/error.log` 
-9. Install ModSecurity Core Rule Set
-    1. `sudo git clone https://github.com/coreruleset/coreruleset.git /etc/modsecurity/owasp-crs`
-10. Copy crs-setup.conf.example to crs-setup.conf
-    1. `sudo cp crs-setup.conf.example crs-setup.conf`
-11. Include the CRS in ModSecurity Configuration
-    1. Add the following to modsecurity.conf
-        1. `Include /etc/modsecurity/owasp-crs/crs-setup.conf`
-        2. `Include /etc/modsecurity/owasp-crs/rules/*.conf`
-12. Restart Apache
-    1. `sudo systemctl restart apache2`
-    2. `sudo systemctl status apache2`
-13. Check security logs to make sure ModSecurity loads correctly
-    1. `sudo tail -f /var/log/apache2/error.log`  
-14. Monitor Logs
-    1. `sudo tail -f /var/log/modsecurity/audit.log`
-15. Run a test
+8. Run a test
     1. Create a test rule file 
         1. `sudo nano /etc/modsecurity/modsecurity-test.conf`
     2. Add a new rule
         1. `SecRule REQUEST_URI "@streq /test" "id:1001,phase:1,log,deny,status:403"`
     3. Include the test configuration in modsecurity.conf
         1. `Include /etc/modsecurity/modsecurity-test.conf`
-16. Restart Apache
+9. Restart Apache
     1. `sudo systemctl restart apache2`
-    2. `sudo systemctl status apache2`
-17. To test your configuration go to: http://<your_server>/test
+10. To test your configuration go to: `http://<your_server>/test`
 
 ### SETTING UP SSH
 
@@ -543,7 +551,7 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 ```
 
-4. Create an [entrypoint.sh](http://entrypoint.sh) file
+1. Create an [entrypoint.sh](http://entrypoint.sh) file
 
 ```bash
 #!/bin/bash
@@ -562,13 +570,13 @@ tail -f /dev/null
 exec "$@"
 ```
 
-5. Make sure [entrypoint.sh](http://entrypoint.sh) has executable permissions
+1. Make sure [entrypoint.sh](http://entrypoint.sh) has executable permissions
     1. `chmod +x [entrypoint.sh](http://entrypoint.sh/)`
-6. Create a Build 
+2. Create a Build 
     1. `sudo docker buildx build -t test-image`
-7. Create and Run Docker Image
+3. Create and Run Docker Image
     1. `sudo docker run -d -- name <container_name> -p PORT:PORT <image_name>`
-8. Start Container
+4. Start Container
     1. `sudo docker start <container_name>`
 
 ### SETTING UP POSTGRESQL FOR APACHE SERVER
@@ -578,12 +586,12 @@ exec "$@"
 2. Start and enable PostgreSQL
     1.  `systemctl start postgresql`
     2. `sudo systemctl enable postgresql`
-  
+
 **COMMON PSQL COMMANDS**
 
 | Command | Basic Commands |
 | --- | --- |
-| sudo -u usernamae psql | Login in to psql |
+| sudo -u usernamae psql -d db_name | Login in to psql |
 | \q | Quit  |
 | \h | Help |
 | \l | List all Databases |
@@ -634,18 +642,33 @@ exec "$@"
 | sudo systemctl start postgresql | Start postgresql |
 | sudo systemctl stop postgresql | Stop postgresql |
 | sudo systemctl restart postgresql | Restart postgresql |
-
-3. Configuration of PostgreSQL for Apache Server
+1. Configuration of PostgreSQL for Apache Server
     1. Add Proxy for PostgreSQL
         1. `ProxyPreserveHost On
         ProxyPass /api http://localhost:5000/api
         ProxyPassReverse /api http://localhost:5000/api`
     2. Reload Apache
         1. `sudo systemctl restart apache2`
-4. Build and Deploy Backend
+2. Build and Deploy Backend
     1. `Example: run npm build`
     2. `npm run export`
     3. `sudo mv out/* /var/www/html/your_frontend)/`
+
+### SECURITY TESTING
+
+1. Check open ports & verify that ufw is properly configured
+    1. `sudo lsof -i -P -n`
+    2. `sudo ufw status verbose`
+2. Install nmap to scan for open ports
+    1. `sudo apt install nmap`
+3. Perform external scan for open ports
+    1. `nmap -sV -A [Your_Server_IP]`
+
+### CREATING A STAGING ENVIRONMENT FOR PENETRATION TESTING
+
+1. Add staging subdomain to cloudflare DNS
+    1. staging.your_domain.com
+2. 
 
 ### CITATIONS
 
@@ -670,3 +693,13 @@ Ubuntu Documentation Team. "UFW - How to configure UFW firewall." Ubuntu Documen
 WireGuard Technologies. "WireGuard Quickstart Guide." WireGuard, 2024. https://www.wireguard.com/quickstart/. Accessed 15 Sept. 2024.
 
 The OpenSSH Project. "OpenSSH Manual." OpenSSH, 2024. https://www.openssh.com/manual.html. Accessed 15 Sept. 2024.
+
+Xfinity. "How to Enable or Disable Bridge Mode on Your Wireless Gateway." Xfinity Support, Comcast, 21 Apr. 2023, [www.xfinity.com/support/articles/wireless-gateway-enable-disable-bridge-mode](http://www.xfinity.com/support/articles/wireless-gateway-enable-disable-bridge-mode).
+
+u/viPro. "Is Xfinity/Comcast Xfi Gateway on Bridge Mode a Problem?" Reddit, 28 Dec. 2013, [www.reddit.com/r/homelab/comments/1ctxoxo/is_xfinitycomcast_xfi_gateway_on_bridgemode_a/](http://www.reddit.com/r/homelab/comments/1ctxoxo/is_xfinitycomcast_xfi_gateway_on_bridgemode_a/).
+
+Xfinity Forums. "Advanced Security and Other Questions." Xfinity, 16 Jan. 2023, [forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de](http://forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de).
+
+Need MLA Citations -
+
+https://www.inmotionhosting.com/support/server/apache/install-modsecurity-apache-module/
