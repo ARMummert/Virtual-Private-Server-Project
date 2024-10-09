@@ -1,4 +1,4 @@
-# Dedicated Server
+# Dedicated Server -- This is an inprogress project in the last of development
 
 ### **PROJECT GOAL**
 
