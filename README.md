@@ -74,21 +74,6 @@ By utilizing these tools I was able to create a robust and secure server environ
 ## INSTALLATION, INSTRUCTIONS, & SETUP
 
 ---
-## VPS Setup Progress
-
-<div style="width: 100%; background-color: #e0e0e0; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-    <div style="width: 50%; height: 30px; background-color: #76c7c0; text-align: center; line-height: 30px; color: white;">
-        50%
-    </div>
-</div>
-
-### Stages:
-<ul>
-  <li><strong>1. Docker Setup</strong>: Complete <span title="Configured Docker to run applications in isolated containers.">🛈</span></li>
-  <li><strong>2. VPN Configuration</strong>: In Progress <span title="Setting up WireGuard for secure remote access.">🛈</span></li>
-  <li><strong>3. Firewall Setup</strong>: Pending <span title="Configuring UFW to control incoming and outgoing traffic.">🛈</span></li>
-  <li><strong>4. Cloudflare Integration</strong>: Pending <span title="Integrating Cloudflare for DNS and security services.">🛈</span></li>
-</ul>
 
 ### OPERATING SYSTEM SETUP
 
