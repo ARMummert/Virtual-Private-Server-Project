@@ -8,7 +8,7 @@ To create a secure dedicated server capable of hosting a web application and a d
 
 With the rising costs of web hosting and cloud services, I decided to build my own dedicated server to host my database and deploy my software engineering portfolio.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.  
 
-[https://github.com/ARMummert/Dedicated-Server-Project/blob/main/Dedicated-Server.png]
+![Dedicated Server Flow](https://raw.githubusercontent.com/ARMummert/Dedicated-Server-Project/refs/heads/main/Dedicated-Server.png)
 
 ### **TOOLS & TECHNOLOGIES**
 
