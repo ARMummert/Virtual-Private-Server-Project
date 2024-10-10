@@ -1,14 +1,21 @@
-# Dedicated Server -- This is an inprogress project in the last of development
+This report is an overview of my dedicated server project including, technologies used, security best practices, challenges faced, and lessons learned.  My primary goal for this project was to create a secure dedicated server capable of hosting a web application and a database. 
 
-### **PROJECT GOAL**
+### **PROJECT GOALS**
 
-To create a secure dedicated server capable of hosting a web application and a database. 
+1. Create a scalable but stable server environment.
+2. Create a robust set of security features to prevent vulnerabilities and attacks.
+3. To create a dedicated server to host my web applications and databases.
+4. To optimize server performance.
 
 ### **PROJECT OVERVIEW**
 
-With the rising costs of web hosting and cloud services, I decided to build my own dedicated server to host my database and deploy my software engineering portfolio.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.  
+With the rising costs of web hosting and cloud services, I decided to build my own dedicated server to host my database and deploy my software engineering portfolio and postgresql database.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.  I worked independently on this project for continued learning in server administration.
 
-![Dedicated Server Flow](https://raw.githubusercontent.com/ARMummert/Dedicated-Server-Project/refs/heads/main/Dedicated-Server.png)
+![Dedicated-Server - Page 1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dbffe348-896c-4c6f-967e-6b4014b6c269/884d3a54-bd0e-4aa1-b7fb-9006972bfb55/Dedicated-Server_-_Page_1.png)
+
+### **PROJECT DEVELOPMENT TIME FRAME**
+
+September 1, 2024 to November 1, 2024 (projected done date)
 
 ### **TOOLS & TECHNOLOGIES**
 
@@ -18,18 +25,21 @@ With the rising costs of web hosting and cloud services, I decided to build my o
 
 **Server**  
 
-- Apache2 - server for hosting web applications & databases
+- Apache2 server for hosting web applications & databases
 
 **Database**
 
-- PostgreSQL - for relational database
+- PostgreSQL for relational database
+- PgAdmin for managing postgresql database
 
 **Security**
 
 - Wireguard VPN for secure connections to the VPS
 - UFW - uncomplicated firewall
 - Fail2Ban for brute-force attacks
-- ModSecurity - for web application firewall (WAF), request filtering and access control, real-time traffic monitoring, and attack detection and prevention
+- ModSecurity  for web application firewall (WAF), request filtering and access control, real-time traffic monitoring, and attack detection and prevention
+- Honeypot for preventing spam, malware, etc
+- Snort for Intrusion Detection (IDS)
 
 **Cloudflare**
 
@@ -43,6 +53,30 @@ With the rising costs of web hosting and cloud services, I decided to build my o
 
 - SSH
 
+**Configuration Management**
+
+- Puppet for infrastructure management
+
+**Monitoring Tools**
+
+- Nagios for network monitoring
+
+**Containerization**
+
+- Docker
+
+**Server Performance & Optimization**
+
+- Cloudflare for compression and caching
+
+**Backup & Recovery**
+
+- Bacula for backup and recovery
+
+Password Manager
+
+- BitWarden for storing passwords securely
+
 **Services**
 
 - Web Hosting - Serving static and dynamic web content
@@ -50,11 +84,11 @@ With the rising costs of web hosting and cloud services, I decided to build my o
 
 ## WHAT I LEARNED
 
-Creating a dedicated server environment was a challenging but rewarding project.  I began this project with the goal of building a secure, reliable, and robust dedicated server to host my webpage and my PostgreSQL database.  The project started with researching server administration, networking, and security best practices.  During this time, I gained continued learning experiences with building an Apache server, setting up a Docker container, setting up a PostgreSQL database, and how to implement security measures such as SSL, WAF, and DDoS protection.
+Creating a dedicated server environment was a challenging but rewarding project.  I began this project with the goal of building a secure, reliable, and robust dedicated server to host my webpage and my PostgreSQL database.  The project started with researching server administration, networking, and security best practices.  During this time, I gained continued learning experiences with building an Apache server, setting up a Docker container, setting up a PostgreSQL database, and how to implement security measures.
 
 ### SECURITY BEST PRACTICES
 
-To ensure that my server remains secure, I implemented a robust combination of security measures.  I felt this was an essential step to protect my server from attacks and vulnerabilities.  To avoid a Double NAT situation I placed my modem into bridge mode and connected my router to the modem via an Ethernet cable.  I was then able to use the modems IP address to connect my server to my domain name.  By placing my modem in bridge mode I was able to avoid using my public IP address and to take advantage of the advanced security features that my router offers.  
+To ensure that my server remains secure, I implemented a robust combination of security measures.  I felt this was an essential step to protect my server from attacks and vulnerabilities.  
 
 **NETWORK SECURITY**
 
@@ -66,10 +100,45 @@ For network security I created strict firewall rules for both incoming and outgo
 2. ModSecurity to have a server-side web application firewall to prevent attacks such as, SQL Injection and cross-site scripting.
 3. Wireguard VPN to provide a secure tunnel between the server and any client devices
 4. UFW (uncomplicated firewall) to allow or deny ports
+5. Snort for intrusion prevention system (IPS)
 
 By utilizing these tools I was able to create a robust and secure server environment.
 
+**MULTI-FACTOR AUTHENTICATION**
+
+I utilized Google Authenticator to enable 2FA for my secure shell (ssh) setup. 
+
+**PASSWORD BEST PRACTICES**
+
+1. MFA
+2. Bitwarden for password management
+3. Passwords set at 16 characters
+4. Complexity using special characters
+
+**SECURITY AUDITS**
+
+- Monthly security audits set up using Nagios
+
+<aside>
+💡
+
 ### PROBLEM SOLVING & TROUBLESHOOTING
+
+My approach to problem solving involves exploring various sources so I can gain a general understanding of a piece of software or a program, including documentation and tutorials.  As a developer, I prioritized learning about all of the services I have worked with on this project.  
+
+**Network Connectivity Issues** - I encountered a double NAT situation while port forwarding.  To resolve this I placed my modem in to bridge mode and port forwarded my router instead.  This allowed me to eliminate the double NAT situation and establish a successful connection to my server.
+
+To troubleshoot issues in regards to my apache server, I carefully read through the logs, config files, and system metrics.  I isolated the issue, consulted documentation, and researched online to find a solution.
+
+</aside>
+
+### PERFORMANCE & OPTIMIZATION
+
+While building the server utilized Cloudflare’s Cache Rules and Caching Configuration to store copies of large or frequently accessed data and their compression configuration to reduce data size without losing quality.
+
+### SCALABILITY
+
+The server’s capability of scaling was an important part of my project.  I implemented vertical scaling by adding more RAM and utilizing an SSD for improved performance.  I performed a code review strictly for making sure my code was efficient and configured my database for my optimal workload. In the future I will implement cluster management with Kubernetes to manage clusters of servers and leverage cloud dedicated server.
 
 ## INSTALLATION, INSTRUCTIONS, & SETUP
 
@@ -668,7 +737,6 @@ exec "$@"
 
 1. Add staging subdomain to cloudflare DNS
     1. staging.your_domain.com
-2. 
 
 ### CITATIONS
 
@@ -703,3 +771,19 @@ Xfinity Forums. "Advanced Security and Other Questions." Xfinity, 16 Jan. 2023, 
 Need MLA Citations -
 
 https://www.inmotionhosting.com/support/server/apache/install-modsecurity-apache-module/
+
+https://www.snort.org/
+
+https://www.projecthoneypot.org/about_us.php
+
+https://www.it.ucsb.edu/general-security-resources/password-best-practices
+
+[https://www.redswitches.com/blog/server-scaling/#:~:text=Simply put%2C server scaling is,and manage an increased workload](https://www.redswitches.com/blog/server-scaling/#:~:text=Simply%20put%2C%20server%20scaling%20is,and%20manage%20an%20increased%20workload).
+
+https://stackify.com/how-to-optimize-server-performance/
+
+https://www.cloudpanel.io/blog/server-performance/
+
+https://www.linkedin.com/pulse/best-practices-optimizing-server-performance-guide-innosewa-tiwari-5vvef/
+
+https://developers.cloudflare.com/cache/how-to/cache-rules/examples/
