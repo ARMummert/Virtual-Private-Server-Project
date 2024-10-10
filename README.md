@@ -767,22 +767,48 @@ u/viPro. "Is Xfinity/Comcast Xfi Gateway on Bridge Mode a Problem?" Reddit, 28 D
 
 Xfinity Forums. "Advanced Security and Other Questions." Xfinity, 16 Jan. 2023, [forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de](http://forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de).
 
-Need MLA Citations -
+### CITATIONS
 
-https://www.inmotionhosting.com/support/server/apache/install-modsecurity-apache-module/
+Cloudflare "Cloudflare Connectivity Cloud." Cloudflare. Cloudflare, 2024. [www.cloudflare.com](https://www.cloudflare.com/). Accessed 28 Sept. 2024.
 
-https://www.snort.org/
+The Apache Software Foundation™. "Apache HTTP Server Documentation." The Apache Software Foundation, 2024. https://httpd.apache.org/docs-project/. Accessed 1 Sept. 2024.
 
-https://www.projecthoneypot.org/about_us.php
+Dedicated-Server.png "Lucidchart." Lucidchart. Lucidchart, 2024. [www.lucidchart.com](https://www.lucidchart.com/). Accessed 25 Sept. 2024.
 
-https://www.it.ucsb.edu/general-security-resources/password-best-practices
+fail2ban.org. "Fail2ban." GitHub, GitHub, Feb. 20, 2024. https://github.com/fail2ban/fail2ban. Accessed 15 Sept. 2024.
 
-[https://www.redswitches.com/blog/server-scaling/#:~:text=Simply put%2C server scaling is,and manage an increased workload](https://www.redswitches.com/blog/server-scaling/#:~:text=Simply%20put%2C%20server%20scaling%20is,and%20manage%20an%20increased%20workload).
+OWASP ModSecurity. "ModSecurity v3.0.12." GitHub, GitHub, 2024. https://github.com/owasp-modsecurity/ModSecurity/tree/v3.0.12. Accessed 3 Oct. 2024.
 
-https://stackify.com/how-to-optimize-server-performance/
+PhoenixNAP. "How to Setup and Configure ModSecurity on Apache." PhoenixNAP Knowledge Base, PhoenixNAP, 2024. https://phoenixnap.com/kb/setup-configure-modsecurity-on-apache. Accessed 3 Oct. 2024.
 
-https://www.cloudpanel.io/blog/server-performance/
+PostgreSQL Global Development Group. "PostgreSQL Documentation." PostgreSQL, PostgreSQL Global Development Group, 2024. https://www.postgresql.org/docs/. Accessed 3 Oct. 2024.
 
-https://www.linkedin.com/pulse/best-practices-optimizing-server-performance-guide-innosewa-tiwari-5vvef/
+PostgreSQL Global Development Group. "psql Command." PostgreSQL Documentation, PostgreSQL Global Development Group, 2024. https://www.postgresql.org/docs/current/app-psql.html. Accessed 3 Oct. 2024.
 
-https://developers.cloudflare.com/cache/how-to/cache-rules/examples/
+Ubuntu Documentation Team. "UFW - How to configure UFW firewall." Ubuntu Documentation, Ubuntu.com, 2024. https://help.ubuntu.com/community/UFW. Accessed 15 Sept. 2024.
+
+WireGuard Technologies. "WireGuard Quickstart Guide." WireGuard, 2024. https://www.wireguard.com/quickstart/. Accessed 15 Sept. 2024.
+
+The OpenSSH Project. "OpenSSH Manual." OpenSSH, 2024. https://www.openssh.com/manual.html. Accessed 15 Sept. 2024.
+
+Xfinity. "How to Enable or Disable Bridge Mode on Your Wireless Gateway." Xfinity Support, Comcast, 21 Apr. 2023, [www.xfinity.com/support/articles/wireless-gateway-enable-disable-bridge-mode](http://www.xfinity.com/support/articles/wireless-gateway-enable-disable-bridge-mode).
+
+u/viPro. "Is Xfinity/Comcast Xfi Gateway on Bridge Mode a Problem?" Reddit, 28 Dec. 2013, [www.reddit.com/r/homelab/comments/1ctxoxo/is_xfinitycomcast_xfi_gateway_on_bridgemode_a/](http://www.reddit.com/r/homelab/comments/1ctxoxo/is_xfinitycomcast_xfi_gateway_on_bridgemode_a/).
+
+Xfinity Forums. "Advanced Security and Other Questions." Xfinity, 16 Jan. 2023, [forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de](http://forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de).
+
+InMotion Hosting. "Install ModSecurity Apache Module." InMotion Hosting Support,  Accessed October 10, 2024. https://www.inmotionhosting.com/support/edu/control-web-panel/cwp-user/account-management/mod-security-configuration/
+
+Snort.org. "[Snort Website]." Accessed October 10, 2024. https://www.snort.org/
+
+Project Honey Pot. "About Us." Project Honey Pot, Accessed October 10, 2024. https://www.projecthoneypot.org/
+
+University of California Santa Barbara, IT Services. "Password Best Practices." UCSB IT Services, Accessed October 10, 2024. https://www.it.ucsb.edu/it-security-faculty-and-staff/best-practices-securing-campus-electronic-information
+
+Red Switches. "Server Scaling: How to Scale Your Server Infrastructure Effectively." Red Switches, August 21, 2020. Accessed October 10, 2024. https://www.redswitches.com/
+
+Stackify. "How to Optimize Server Performance." Stackify, Accessed October 10, 2024. https://stackify.com/site-performance-monitoring-best-practices/
+
+CloudPanel. "Server Performance Optimization: Tips and Tricks for Faster Servers." CloudPanel, August 13, 2021. Accessed October 10, 2024. https://www.plesk.com/blog/various/server-optimization-how-to-increase-server-speed-performance/
+
+Cloudflare. "Cache Rules Examples." Cloudflare Developers, Accessed October 10, 2024. https://developers.cloudflare.com/cache/how-to/cache-rules/
