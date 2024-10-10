@@ -119,18 +119,13 @@ I utilized Google Authenticator to enable 2FA for my secure shell (ssh) setup.
 
 - Monthly security audits set up using Nagios
 
-<aside>
-💡
-
-### PROBLEM SOLVING & TROUBLESHOOTING
+**PROBLEM SOLVING & TROUBLESHOOTING**
 
 My approach to problem solving involves exploring various sources so I can gain a general understanding of a piece of software or a program, including documentation and tutorials.  As a developer, I prioritized learning about all of the services I have worked with on this project.  
 
 **Network Connectivity Issues** - I encountered a double NAT situation while port forwarding.  To resolve this I placed my modem in to bridge mode and port forwarded my router instead.  This allowed me to eliminate the double NAT situation and establish a successful connection to my server.
 
 To troubleshoot issues in regards to my apache server, I carefully read through the logs, config files, and system metrics.  I isolated the issue, consulted documentation, and researched online to find a solution.
-
-</aside>
 
 ### PERFORMANCE & OPTIMIZATION
 
@@ -139,6 +134,10 @@ While building the server utilized Cloudflare’s Cache Rules and Caching Config
 ### SCALABILITY
 
 The server’s capability of scaling was an important part of my project.  I implemented vertical scaling by adding more RAM and utilizing an SSD for improved performance.  I performed a code review strictly for making sure my code was efficient and configured my database for my optimal workload. In the future I will implement cluster management with Kubernetes to manage clusters of servers and leverage cloud dedicated server.
+
+### **CONCLUSION**
+
+Successful creation of a dedicated server reflects my understanding of server technologies and security practices.  By utilizing tools such as Apache, Docker, Wireguard VPN, ModSecurity, Fail2Ban, UFW, Snort3, and honeypot along side Cloudflare for dns management, caching and compression, the project delivers a scalable, secure, and performance optimized server environment.  The deployment of SSH, SSL, and advanced firewall rules enable to the server to remain secure and keep data private.  This project not only meets its goals but shows my abilities to design and implement complex server architectures.
 
 ## INSTALLATION, INSTRUCTIONS, & SETUP
 
