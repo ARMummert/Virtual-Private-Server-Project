@@ -465,18 +465,14 @@ Install latest version of the Apache2 Web Server.
     AllowedIPs = 10.0.0.2/32         
     
     ```
-    
-4. Enable IP Forwarding
-    1. `echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.conf`
-    2. `sudo sysctl -p`
-5. Start Wireguard
+4. Start Wireguard
     1. `sudo wg-quick up wg0`
-6. Enable Wireguard to start on boot
+5. Enable Wireguard to start on boot
     1. `sudo systemctl enable wg-quick@wg0`
-7. Configure the Wireguard client
+6. Configure the Wireguard client
     1. `umask 077`
     2. `wg genkey | tee client_private.key | wg pubkey > client_public.key`
-8. Create Wireguard client configuration file
+7. Create Wireguard client configuration file
     1. `sudo nano ~/wg-client.conf`
 
 ```jsx
@@ -602,9 +598,9 @@ AllowedIPs = 0.0.0.0/0
 FROM debian:latest
 
 # Install WireGuard and necessary dependencies
-RUN apt-get update && \
-    apt-get install -y wireguard iproute2 qrencode iptables && \
-    apt-get clean
+RUN apt update && \
+    apt install -y wireguard iproute2 qrencode iptables && \
+    apt clean
 
 # Expose WireGuard's default port (UDP 51820)
 EXPOSE 51820/udp
@@ -623,10 +619,6 @@ ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 ```bash
 #!/bin/bash
-
-# Enable IP forwarding
-sysctl -w net.ipv4.ip_forward=1
-sysctl -w net.ipv6.conf.all.forwarding=1
 
 # Start WireGuard
 wg-quick up wg0-server
