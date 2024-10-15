@@ -670,8 +670,8 @@ exec "$@"
 | \df | List all functions |
 | \s | Show command history |
 | Command | Creating and Deleting a Database |
-| createdb mydb | Create database |
-| dropdb mydb | Delete a database |
+| CREATE DATABASE <db_name>; | Create database |
+| DROP DATABASE <db_name>; | Delete a database |
 | Command | Query and Output Commands |
 | SELECT * from table_name;  | Execute SQL query |
 | \timing | Display query execution time |
