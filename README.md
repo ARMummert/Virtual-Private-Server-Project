@@ -759,36 +759,6 @@ u/viPro. "Is Xfinity/Comcast Xfi Gateway on Bridge Mode a Problem?" Reddit, 28 D
 
 Xfinity Forums. "Advanced Security and Other Questions." Xfinity, 16 Jan. 2023, [forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de](http://forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de).
 
-### CITATIONS
-
-Cloudflare "Cloudflare Connectivity Cloud." Cloudflare. Cloudflare, 2024. [www.cloudflare.com](https://www.cloudflare.com/). Accessed 28 Sept. 2024.
-
-The Apache Software Foundation™. "Apache HTTP Server Documentation." The Apache Software Foundation, 2024. https://httpd.apache.org/docs-project/. Accessed 1 Sept. 2024.
-
-Dedicated-Server.png "Lucidchart." Lucidchart. Lucidchart, 2024. [www.lucidchart.com](https://www.lucidchart.com/). Accessed 25 Sept. 2024.
-
-fail2ban.org. "Fail2ban." GitHub, GitHub, Feb. 20, 2024. https://github.com/fail2ban/fail2ban. Accessed 15 Sept. 2024.
-
-OWASP ModSecurity. "ModSecurity v3.0.12." GitHub, GitHub, 2024. https://github.com/owasp-modsecurity/ModSecurity/tree/v3.0.12. Accessed 3 Oct. 2024.
-
-PhoenixNAP. "How to Setup and Configure ModSecurity on Apache." PhoenixNAP Knowledge Base, PhoenixNAP, 2024. https://phoenixnap.com/kb/setup-configure-modsecurity-on-apache. Accessed 3 Oct. 2024.
-
-PostgreSQL Global Development Group. "PostgreSQL Documentation." PostgreSQL, PostgreSQL Global Development Group, 2024. https://www.postgresql.org/docs/. Accessed 3 Oct. 2024.
-
-PostgreSQL Global Development Group. "psql Command." PostgreSQL Documentation, PostgreSQL Global Development Group, 2024. https://www.postgresql.org/docs/current/app-psql.html. Accessed 3 Oct. 2024.
-
-Ubuntu Documentation Team. "UFW - How to configure UFW firewall." Ubuntu Documentation, Ubuntu.com, 2024. https://help.ubuntu.com/community/UFW. Accessed 15 Sept. 2024.
-
-WireGuard Technologies. "WireGuard Quickstart Guide." WireGuard, 2024. https://www.wireguard.com/quickstart/. Accessed 15 Sept. 2024.
-
-The OpenSSH Project. "OpenSSH Manual." OpenSSH, 2024. https://www.openssh.com/manual.html. Accessed 15 Sept. 2024.
-
-Xfinity. "How to Enable or Disable Bridge Mode on Your Wireless Gateway." Xfinity Support, Comcast, 21 Apr. 2023, [www.xfinity.com/support/articles/wireless-gateway-enable-disable-bridge-mode](http://www.xfinity.com/support/articles/wireless-gateway-enable-disable-bridge-mode).
-
-u/viPro. "Is Xfinity/Comcast Xfi Gateway on Bridge Mode a Problem?" Reddit, 28 Dec. 2013, [www.reddit.com/r/homelab/comments/1ctxoxo/is_xfinitycomcast_xfi_gateway_on_bridgemode_a/](http://www.reddit.com/r/homelab/comments/1ctxoxo/is_xfinitycomcast_xfi_gateway_on_bridgemode_a/).
-
-Xfinity Forums. "Advanced Security and Other Questions." Xfinity, 16 Jan. 2023, [forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de](http://forums.xfinity.com/conversations/your-home-network/advanced-security-and-other-questions/65d7890f61dd3a25f37374de).
-
 InMotion Hosting. "Install ModSecurity Apache Module." InMotion Hosting Support,  Accessed October 10, 2024. https://www.inmotionhosting.com/support/edu/control-web-panel/cwp-user/account-management/mod-security-configuration/
 
 Snort.org. "[Snort Website]." Accessed October 10, 2024. https://www.snort.org/
