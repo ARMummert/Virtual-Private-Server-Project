@@ -2,9 +2,9 @@
 FROM debian:latest
 
 # Install WireGuard and necessary dependencies
-RUN apt-get update && \
-    apt-get install -y wireguard iproute2 qrencode iptables && \
-    apt-get clean
+RUN apt update && \
+    apt install -y wireguard iproute2 qrencode iptables && \
+    apt clean
 
 # Expose WireGuard's default port (UDP 51820)
 EXPOSE 51820/udp
