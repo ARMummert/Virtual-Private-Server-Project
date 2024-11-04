@@ -791,3 +791,12 @@ Stackify. "How to Optimize Server Performance." Stackify, Accessed October 10, 2
 CloudPanel. "Server Performance Optimization: Tips and Tricks for Faster Servers." CloudPanel, August 13, 2021. Accessed October 10, 2024. https://www.plesk.com/blog/various/server-optimization-how-to-increase-server-speed-performance/
 
 Cloudflare. "Cache Rules Examples." Cloudflare Developers, Accessed October 10, 2024. https://developers.cloudflare.com/cache/how-to/cache-rules/
+"Ddclient Documentation." *DDClient*, https://ddclient.net/. Accessed 4 Nov. 2024.
+
+"Installation." *Cowrie Documentation*, https://cowrie.readthedocs.io/en/latest/INSTALL.html. Accessed 4 Nov. 2024
+
+"Snort Installation Documentation." *Snort Documentation*, https://docs.snort.org/start/installation. Accessed 4 Nov. 2024.
+
+"Installing the Wazuh Agent in Linux." *Wazuh Documentation*, https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-linux.html. Accessed 4 Nov. 2024.
+
+"Quickstart Guide." *Suricata Documentation*, https://docs.suricata.io/en/latest/quickstart.html. Accessed 4 Nov. 2024.
