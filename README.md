@@ -38,8 +38,9 @@ September 1, 2024 to November 1, 2024 (projected done date)
 - UFW - uncomplicated firewall
 - Fail2Ban for brute-force attacks
 - ModSecurity  for web application firewall (WAF), request filtering and access control, real-time traffic monitoring, and attack detection and prevention
-- Honeypot for preventing spam, malware, etc
-- Snort for Intrusion Detection (IDS)
+- Cowrie for SSH honeypot
+- Snort3 for IPS/IDS
+- Wazuh for unified XDR and SIEM capabilities
 
 **Cloudflare**
 
@@ -133,11 +134,11 @@ While building the server utilized Cloudflare’s Cache Rules and Caching Config
 
 ### SCALABILITY
 
-The server’s capability of scaling was an important part of my project.  I implemented vertical scaling by adding more RAM and utilizing an SSD for improved performance.  I performed a code review strictly for making sure my code was efficient and configured my database for my optimal workload. In the future I will implement cluster management with Kubernetes to manage clusters of servers and leverage cloud dedicated server.
+The server’s capability of scaling was an important part of my project.  I implemented vertical scaling by adding more RAM and utilizing an SSD for improved performance.  I performed a code review strictly for making sure my code was efficient and configured my database for my optimal workload. 
 
 ### **CONCLUSION**
 
-Successful creation of a dedicated server reflects my understanding of server technologies and security practices.  By utilizing tools such as Apache, Docker, Wireguard VPN, ModSecurity, Fail2Ban, UFW, Snort3, and honeypot along side Cloudflare for dns management, caching and compression, the project delivers a scalable, secure, and performance optimized server environment.  The deployment of SSH, SSL, and advanced firewall rules enable to the server to remain secure and keep data private.  This project not only meets its goals but shows my abilities to design and implement complex server architectures.
+Successful creation of a dedicated server reflects my understanding of server technologies and security practices.  By utilizing tools such as Apache, Docker, Wireguard VPN, ModSecurity, Fail2Ban, UFW, Snort3, and Wazuh along side Cloudflare for DNS management, caching and compression, the project delivers a scalable, secure, and performance optimized server environment.  The deployment of SSH, SSL, and advanced firewall rules enable to the server to remain secure and keep data private.  This project not only meets its goals but shows my abilities to design and implement complex server architectures.
 
 ## INSTALLATION, INSTRUCTIONS, & SETUP
 
@@ -535,6 +536,22 @@ AllowedIPs = 0.0.0.0/0
 9. Restart Apache
     1. `sudo systemctl restart apache2`
 10. To test your configuration go to: `http://<your_server>/test`
+
+### SETTING UP COWRIE (HONEYPOT FOR SSH)
+
+https://cowrie.readthedocs.io/en/latest/INSTALL.html
+
+### SETTING UP SNORT
+
+https://docs.snort.org/start/installation
+
+### SETTING UP SURICATA
+
+https://docs.suricata.io/en/latest/quickstart.html
+
+### SETTING UP WAZUH
+
+https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-linux.html
 
 ### SETTING UP SSH
 
