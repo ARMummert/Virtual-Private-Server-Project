@@ -30,16 +30,16 @@ September 1, 2024 to November 1, 2024 (projected done date)
 **Database**
 
 - PostgreSQL for relational database
-- PgAdmin for managing postgresql database
+- PgAdmin for managing postgresql databases
 
 **Security**
 
-- Wireguard VPN for secure connections to the VPS
+- Wireguard VPN for secure connections to the server
 - UFW - uncomplicated firewall
 - Fail2Ban for brute-force attacks
-- ModSecurity  for web application firewall (WAF), request filtering and access control, real-time traffic monitoring, and attack detection and prevention
+- ModSecurity for web application firewall (WAF), request filtering and access control, real-time traffic monitoring, and attack detection and prevention
 - Cowrie for SSH honeypot
-- Snort3 for IPS/IDS
+- Snort3 for IPS/IDS (changing to suricata soon)
 - Wazuh for unified XDR and SIEM capabilities
 
 **Cloudflare**
@@ -53,14 +53,6 @@ September 1, 2024 to November 1, 2024 (projected done date)
 **OpenSSH**
 
 - SSH
-
-**Configuration Management**
-
-- Puppet for infrastructure management
-
-**Monitoring Tools**
-
-- Nagios for network monitoring
 
 **Containerization**
 
@@ -101,7 +93,7 @@ For network security I created strict firewall rules for both incoming and outgo
 2. ModSecurity to have a server-side web application firewall to prevent attacks such as, SQL Injection and cross-site scripting.
 3. Wireguard VPN to provide a secure tunnel between the server and any client devices
 4. UFW (uncomplicated firewall) to allow or deny ports
-5. Snort for intrusion prevention system (IPS)
+5. Snort for intrusion detection system (IPS/IDS)
 
 By utilizing these tools I was able to create a robust and secure server environment.
 
@@ -115,10 +107,6 @@ I utilized Google Authenticator to enable 2FA for my secure shell (ssh) setup.
 2. Bitwarden for password management
 3. Passwords set at 16 characters
 4. Complexity using special characters
-
-**SECURITY AUDITS**
-
-- Monthly security audits set up using Nagios
 
 **PROBLEM SOLVING & TROUBLESHOOTING**
 
@@ -134,7 +122,7 @@ While building the server utilized Cloudflare’s Cache Rules and Caching Config
 
 ### SCALABILITY
 
-The server’s capability of scaling was an important part of my project.  I implemented vertical scaling by adding more RAM and utilizing an SSD for improved performance.  I performed a code review strictly for making sure my code was efficient and configured my database for my optimal workload. 
+The server’s capability of scaling was an important part of my project.  I implemented vertical scaling by adding more RAM and utilizing an SSD for improved performance.  
 
 ### **CONCLUSION**
 
