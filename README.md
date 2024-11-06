@@ -15,7 +15,7 @@ With the rising costs of web hosting and cloud services, I decided to build my o
 
 ### **PROJECT DEVELOPMENT TIME FRAME**
 
-September 1, 2024 to December 1, 2024 (projected done date)
+September 1, 2024 to November 1, 2024 
 
 ### **TOOLS & TECHNOLOGIES**
 
