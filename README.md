@@ -11,7 +11,7 @@ This report is an overview of my virtual private server project including, techn
 
 With the rising costs of web hosting and cloud services, I decided to build my own virtual private server to host my database and deploy my software engineering portfolio and postgreSQL database.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.  I worked independently on this project for continued learning in server administration.
 
-![Virtual Private Server Flow](https://raw.githubusercontent.com/ARMummert/Dedicated-Server-Project/refs/heads/main/Dedicated-Server.png)
+![Virtual Private Server Flow](https://raw.githubusercontent.com/ARMummert/Virtual-Private-Server-Project/refs/heads/main/VPS.drawio.png)
 
 ### **PROJECT DEVELOPMENT TIME FRAME**
 
