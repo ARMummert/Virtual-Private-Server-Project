@@ -788,3 +788,7 @@ Cloudflare. "Cache Rules Examples." Cloudflare Developers, Accessed October 10, 
 "Installing the Wazuh Agent in Linux." *Wazuh Documentation*, https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-linux.html. Accessed 4 Nov. 2024.
 
 "Quickstart Guide." *Suricata Documentation*, https://docs.suricata.io/en/latest/quickstart.html. Accessed 4 Nov. 2024.
+
+Citations needing MLA:
+<a href="https://www.flaticon.com/free-icons/ssh" title="ssh icons">Ssh icons created by Freepik - Flaticon</a>
+
