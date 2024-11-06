@@ -1,4 +1,4 @@
-This report is an overview of my dedicated server project including, technologies used, security best practices, challenges faced, and lessons learned.  My primary goal for this project was to create a secure dedicated server capable of hosting a web application and a database. 
+This report is an overview of my virtual private server project including, technologies used, security best practices, challenges faced, and lessons learned.  My primary goal for this project was to create a secure virtual private server capable of hosting a web application and a database. 
 
 ### **PROJECT GOALS**
 
@@ -9,13 +9,13 @@ This report is an overview of my dedicated server project including, technologie
 
 ### **PROJECT OVERVIEW**
 
-With the rising costs of web hosting and cloud services, I decided to build my own dedicated server to host my database and deploy my software engineering portfolio and postgresql database.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.  I worked independently on this project for continued learning in server administration.
+With the rising costs of web hosting and cloud services, I decided to build my own virtual private server to host my database and deploy my software engineering portfolio and postgreSQL database.  By setting up my own server, I have complete control over my own data and communication infrastructure, I can reduce costs, and I can easily scale my current server to host future projects.  I worked independently on this project for continued learning in server administration.
 
-![Dedicated Server Flow](https://raw.githubusercontent.com/ARMummert/Dedicated-Server-Project/refs/heads/main/Dedicated-Server.png)
+![Virtual Private Server Flow](https://raw.githubusercontent.com/ARMummert/Dedicated-Server-Project/refs/heads/main/Dedicated-Server.png)
 
 ### **PROJECT DEVELOPMENT TIME FRAME**
 
-September 1, 2024 to November 1, 2024 (projected done date)
+September 1, 2024 to December 1, 2024 (projected done date)
 
 ### **TOOLS & TECHNOLOGIES**
 
@@ -77,7 +77,7 @@ Password Manager
 
 ## WHAT I LEARNED
 
-Creating a dedicated server environment was a challenging but rewarding project.  I began this project with the goal of building a secure, reliable, and robust dedicated server to host my webpage and my PostgreSQL database.  The project started with researching server administration, networking, and security best practices.  During this time, I gained continued learning experiences with building an Apache server, setting up a Docker container, setting up a PostgreSQL database, and how to implement security measures.
+Creating a virtual private server environment was a challenging but rewarding project.  I began this project with the goal of building a secure, reliable, and robust virtual private server to host my webpage and my PostgreSQL database.  The project started with researching server administration, networking, and security best practices.  During this time, I gained continued learning experiences with building an Apache server, setting up a Docker container, setting up a PostgreSQL database, and how to implement security measures.
 
 ### SECURITY BEST PRACTICES
 
@@ -126,7 +126,7 @@ The server’s capability of scaling was an important part of my project.  I imp
 
 ### **CONCLUSION**
 
-Successful creation of a dedicated server reflects my understanding of server technologies and security practices.  By utilizing tools such as Apache, Docker, Wireguard VPN, ModSecurity, Fail2Ban, UFW, Snort3, and Wazuh along side Cloudflare for DNS management, caching and compression, the project delivers a scalable, secure, and performance optimized server environment.  The deployment of SSH, SSL, and advanced firewall rules enable to the server to remain secure and keep data private.  This project not only meets its goals but shows my abilities to design and implement complex server architectures.
+Successful creation of a virtual private server reflects my understanding of server technologies and security practices.  By utilizing tools such as Apache, Docker, Wireguard VPN, ModSecurity, Fail2Ban, UFW, Snort3, and Wazuh along side Cloudflare for DNS management, caching and compression, the project delivers a scalable, secure, and performance optimized server environment.  The deployment of SSH, SSL, and advanced firewall rules enable to the server to remain secure and keep data private.  This project not only meets its goals but shows my abilities to design and implement complex server architectures.
 
 ## INSTALLATION, INSTRUCTIONS, & SETUP
 
